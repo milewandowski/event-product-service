@@ -28,14 +28,4 @@ class ProductController {
     Product create(@RequestBody final Product product) {
         return productService.create(product);
     }
-
-    @GetMapping("/add")
-    Product create() {
-        Product product = new Product();
-        product.setSku("sock23-123");
-        product.setName("Sock");
-        product.setWarehouse("Warsaw-1");
-
-        return productService.create(product);
-    }
 }

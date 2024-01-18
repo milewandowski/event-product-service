@@ -17,6 +17,6 @@ class MessageBrokerProductPublisher implements ProductPublisher {
     @Override
     public void send(Product product) {
         log.info("Sending order with id: {}", product.getId());
-        kafkaTemplate.send("product-local", product);
+        kafkaTemplate.send("product-change-topic", product);
     }
 }

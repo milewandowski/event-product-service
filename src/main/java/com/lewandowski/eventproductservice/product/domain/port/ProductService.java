@@ -27,9 +27,4 @@ public final class ProductService {
 
         return savedProduct;
     }
-
-    public void update(Product product) {
-        Product savedProduct = productRepository.save(product);
-        productPublisher.send(savedProduct);
-    }
 }
